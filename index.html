@@ -2,7 +2,7 @@
 <html lang="ar" dir="rtl">
 
 <head>
-<meta charset="UTF-8" />
+<meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
 <title>شركة الدك التجارية</title>
@@ -18,9 +18,12 @@
     box-sizing:border-box;
 }
 
+html,
 body{
-    font-family:'Cairo',sans-serif;
+    width:100%;
+    min-height:100%;
     background:#ffffff;
+    font-family:'Cairo',sans-serif;
     color:#111;
 }
 
@@ -29,12 +32,20 @@ body{
 .hero{
     position:relative;
     min-height:100vh;
-    background:
-    linear-gradient(rgba(255,255,255,0.88), rgba(255,255,255,0.92)),
-    url('background.jpg') center/cover no-repeat;
+    background-color:#ffffff;
+
+    background-image:
+    linear-gradient(rgba(255,255,255,0.92), rgba(255,255,255,0.94)),
+    url('background.jpg');
+
+    background-position:center;
+    background-size:cover;
+    background-repeat:no-repeat;
+
     display:flex;
     align-items:center;
     justify-content:center;
+
     padding:40px 20px;
 }
 
@@ -43,10 +54,15 @@ body{
 .container{
     width:100%;
     max-width:1150px;
-    background:#fff;
+
+    background:#ffffff;
+
     border-radius:30px;
+
     overflow:hidden;
+
     box-shadow:0 15px 50px rgba(0,0,0,0.15);
+
     display:grid;
     grid-template-columns:1fr 1fr;
 }
@@ -55,13 +71,18 @@ body{
 
 .left{
     background:#ffffff;
+
     color:#111;
+
     padding:60px 40px;
+
     display:flex;
     flex-direction:column;
     justify-content:center;
     align-items:center;
+
     text-align:center;
+
     position:relative;
 }
 
@@ -82,6 +103,7 @@ body{
 .logo{
     width:230px;
     margin-bottom:25px;
+
     filter:drop-shadow(0 0 15px rgba(0,0,0,0.12));
 }
 
@@ -94,7 +116,7 @@ body{
     color:#111;
 }
 
-/* النص التعريفي */
+/* النص */
 
 .company-sub{
     color:#444;
@@ -135,18 +157,23 @@ body{
 .info-box{
     margin-bottom:22px;
     padding:20px;
+
     border-radius:18px;
+
     background:#1b1b1b;
+
     border:1px solid rgba(255,255,255,0.06);
+
     transition:0.3s;
 }
 
 .info-box:hover{
     transform:translateY(-4px);
+
     box-shadow:0 10px 25px rgba(255,0,0,0.12);
 }
 
-/* عنوان المعلومة */
+/* العناوين الصغيرة */
 
 .label{
     color:#ff3b3b;
@@ -155,7 +182,7 @@ body{
     margin-bottom:8px;
 }
 
-/* قيمة المعلومة */
+/* القيم */
 
 .value{
     color:#f1f1f1;
@@ -167,23 +194,30 @@ body{
 
 .buttons{
     margin-top:35px;
+
     display:flex;
     flex-wrap:wrap;
+
     gap:15px;
 }
 
-/* زر */
+/* الزر */
 
 .btn{
     text-decoration:none;
+
     padding:14px 24px;
+
     border-radius:14px;
+
     font-weight:700;
+
     transition:0.3s;
+
     font-size:16px;
 }
 
-/* زر أحمر */
+/* الأحمر */
 
 .btn-primary{
     background:#d40000;
@@ -195,7 +229,7 @@ body{
     transform:translateY(-3px);
 }
 
-/* زر أسود */
+/* الأبيض */
 
 .btn-dark{
     background:#ffffff;
@@ -277,6 +311,7 @@ body{
 
         <div class="info-box">
             <div class="label">العنوان</div>
+
             <div class="value">
                 الرقة - طريق حلب - مقابل محطة أبو الهيف
             </div>
@@ -284,6 +319,7 @@ body{
 
         <div class="info-box">
             <div class="label">أرقام التواصل</div>
+
             <div class="value">
                 00905538804000
                 <br>
@@ -293,6 +329,7 @@ body{
 
         <div class="info-box">
             <div class="label">البريد الإلكتروني</div>
+
             <div class="value">
                 osamadikj200422@gmail.com
             </div>
@@ -300,13 +337,15 @@ body{
 
         <div class="info-box">
             <div class="label">Instagram</div>
+
             <div class="value">
-                OIL ALDIK
+                oil_aldik
             </div>
         </div>
 
         <div class="info-box">
             <div class="label">Facebook</div>
+
             <div class="value">
                 شركة الدك للزيوت المعدنية
             </div>
@@ -314,15 +353,15 @@ body{
 
         <div class="buttons">
 
-            <a href="https://wa.me/905538804000" class="btn btn-primary">
+            <a href="https://wa.me/905538804000" class="btn btn-primary" target="_blank">
                 WhatsApp
             </a>
 
-            <a href="#" class="btn btn-dark">
+            <a href="https://www.instagram.com/oil_aldik/" class="btn btn-dark" target="_blank">
                 Instagram
             </a>
 
-            <a href="#" class="btn btn-dark">
+            <a href="https://www.facebook.com/people/%D8%B4%D8%B1%D9%83%D8%A9-%D8%A7%D9%84%D8%AF%D9%83-%D9%84%D9%84%D8%B2%D9%8A%D9%88%D8%AA-%D8%A7%D9%84%D9%85%D8%B9%D8%AF%D9%86%D9%8A%D8%A9/61575738965008/" class="btn btn-dark" target="_blank">
                 Facebook
             </a>
 
