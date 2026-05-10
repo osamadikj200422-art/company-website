@@ -1,114 +1,324 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
 <title>شركة الدك التجارية</title>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
 <style>
-body {
-    margin: 0;
-    font-family: 'Tahoma', sans-serif;
-    background: url('background.jpg') no-repeat center center/cover;
-    color: white;
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-/* طبقة تغميق */
-.overlay {
-    background: rgba(0,0,0,0.75);
-    min-height: 100vh;
-    padding: 20px;
+body{
+    font-family:'Cairo',sans-serif;
+    background:#ffffff;
+    color:#111;
 }
 
-/* الهيدر */
-.header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-}
+/* الخلفية الرئيسية */
 
-.logo {
-    width: 80px;
-}
-
-/* اسم الشركة */
-h1 {
-    color: red;
-    font-size: 32px;
+.hero{
+    position:relative;
+    min-height:100vh;
+    background:
+    linear-gradient(rgba(255,255,255,0.88), rgba(255,255,255,0.92)),
+    url('background.jpg') center/cover no-repeat;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:40px 20px;
 }
 
 /* الصندوق الرئيسي */
-.card {
-    max-width: 600px;
-    margin: 40px auto;
-    background: rgba(0,0,0,0.85);
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow: 0 0 20px red;
+
+.container{
+    width:100%;
+    max-width:1100px;
+    background:#fff;
+    border-radius:30px;
+    overflow:hidden;
+    box-shadow:0 15px 50px rgba(0,0,0,0.15);
+    display:grid;
+    grid-template-columns:1fr 1fr;
 }
 
-/* النص */
-p {
-    font-size: 18px;
-    margin: 10px 0;
+/* القسم اليسار */
+
+.left{
+    background:linear-gradient(135deg,#0e0e0e,#1a1a1a);
+    color:white;
+    padding:60px 40px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    position:relative;
 }
 
-/* أزرار */
-.buttons {
-    margin-top: 20px;
+/* خط أحمر جانبي */
+
+.left::before{
+    content:"";
+    position:absolute;
+    top:0;
+    right:0;
+    width:8px;
+    height:100%;
+    background:#d40000;
 }
 
-.btn {
-    display: inline-block;
-    margin: 5px;
-    padding: 10px 20px;
-    background: red;
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
-    transition: 0.3s;
+/* اللوجو */
+
+.logo{
+    width:180px;
+    margin-bottom:25px;
+    filter:drop-shadow(0 0 10px rgba(255,0,0,0.4));
 }
 
-.btn:hover {
-    background: darkred;
+/* اسم الشركة */
+
+.company-title{
+    font-size:42px;
+    font-weight:800;
+    margin-bottom:10px;
+    color:#ffffff;
 }
+
+.company-sub{
+    color:#d1d1d1;
+    font-size:18px;
+    line-height:1.8;
+}
+
+/* القسم اليمين */
+
+.right{
+    padding:60px 50px;
+    background:#fff;
+}
+
+.section-title{
+    font-size:34px;
+    color:#111;
+    margin-bottom:10px;
+    font-weight:800;
+}
+
+.red-line{
+    width:80px;
+    height:5px;
+    background:#d40000;
+    border-radius:20px;
+    margin-bottom:35px;
+}
+
+/* معلومات */
+
+.info-box{
+    margin-bottom:25px;
+    padding:18px 20px;
+    border:1px solid #eee;
+    border-radius:18px;
+    transition:0.3s;
+    background:#fafafa;
+}
+
+.info-box:hover{
+    transform:translateY(-3px);
+    box-shadow:0 8px 20px rgba(0,0,0,0.08);
+}
+
+.label{
+    color:#d40000;
+    font-weight:700;
+    font-size:15px;
+    margin-bottom:6px;
+}
+
+.value{
+    color:#222;
+    font-size:18px;
+    line-height:1.8;
+}
+
+/* الأزرار */
+
+.buttons{
+    margin-top:35px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+.btn{
+    text-decoration:none;
+    padding:14px 24px;
+    border-radius:14px;
+    font-weight:700;
+    transition:0.3s;
+    font-size:16px;
+}
+
+/* زر أساسي */
+
+.btn-primary{
+    background:#d40000;
+    color:white;
+}
+
+.btn-primary:hover{
+    background:#aa0000;
+    transform:translateY(-2px);
+}
+
+/* زر ثانوي */
+
+.btn-dark{
+    background:#111;
+    color:white;
+}
+
+.btn-dark:hover{
+    background:#000;
+    transform:translateY(-2px);
+}
+
+/* موبايل */
+
+@media(max-width:900px){
+
+.container{
+    grid-template-columns:1fr;
+}
+
+.left{
+    padding:50px 25px;
+}
+
+.right{
+    padding:40px 25px;
+}
+
+.company-title{
+    font-size:34px;
+}
+
+.logo{
+    width:150px;
+}
+
+.section-title{
+    font-size:28px;
+}
+
+}
+
 </style>
 
 </head>
 
 <body>
 
-<div class="overlay">
+<section class="hero">
 
-    <div class="header">
-        <img src="logo.png" class="logo">
-        <h1>شركة الدك التجارية</h1>
+<div class="container">
+
+    <!-- القسم الأيسر -->
+
+    <div class="left">
+
+        <img src="logo.png" alt="Logo" class="logo">
+
+        <h1 class="company-title">
+            شركة الدك التجارية
+        </h1>
+
+        <p class="company-sub">
+            متخصصون في الزيوت المعدنية والتجارة العامة
+            <br>
+            جودة - ثقة - احترافية
+        </p>
+
     </div>
 
-    <div class="card">
-        <p><b>COMPANY INFORMATION / معلومات الشركة</b></p>
+    <!-- القسم الأيمن -->
 
-        <p>📍 العنوان: الرقة - طريق حلب - مقابل محطة ابو الهيف</p>
+    <div class="right">
 
-        <p>📞 الهاتف: 00905538804000 / 0951263966</p>
+        <h2 class="section-title">
+            معلومات الشركة
+        </h2>
 
-        <p>👤 OSAMA ALDEK</p>
+        <div class="red-line"></div>
 
-        <p>📧 Email: osamadikj200422@gmail.com</p>
+        <div class="info-box">
+            <div class="label">العنوان</div>
+            <div class="value">
+                الرقة - طريق حلب - مقابل محطة أبو الهيف
+            </div>
+        </div>
 
-        <p>📸 Instagram: OIL ALDIK</p>
+        <div class="info-box">
+            <div class="label">أرقام التواصل</div>
+            <div class="value">
+                00905538804000
+                <br>
+                0951263966
+            </div>
+        </div>
 
-        <p>📘 Facebook: شركة الدك للزيوت المعدنية</p>
+        <div class="info-box">
+            <div class="label">البريد الإلكتروني</div>
+            <div class="value">
+                osamadikj200422@gmail.com
+            </div>
+        </div>
+
+        <div class="info-box">
+            <div class="label">Instagram</div>
+            <div class="value">
+                OIL ALDIK
+            </div>
+        </div>
+
+        <div class="info-box">
+            <div class="label">Facebook</div>
+            <div class="value">
+                شركة الدك للزيوت المعدنية
+            </div>
+        </div>
 
         <div class="buttons">
-            <a href="https://wa.me/905538804000" class="btn">WhatsApp</a>
-            <a href="#" class="btn">Instagram</a>
-            <a href="#" class="btn">Facebook</a>
+
+            <a href="https://wa.me/905538804000" class="btn btn-primary">
+                WhatsApp
+            </a>
+
+            <a href="#" class="btn btn-dark">
+                Instagram
+            </a>
+
+            <a href="#" class="btn btn-dark">
+                Facebook
+            </a>
+
         </div>
+
     </div>
 
 </div>
+
+</section>
 
 </body>
 </html>
